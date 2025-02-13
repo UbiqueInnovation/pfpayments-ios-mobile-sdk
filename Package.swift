@@ -6,7 +6,7 @@ let package = Package(
     platforms: [.iOS("13.0")],
     products: [
         .library(name: "PostFinanceCheckoutSdk",
-                 targets: ["PostFinanceCheckoutSdk", "ThreeDS_SDK", "TwintSDK", "PostFinanceCheckoutSdkResource"]),
+                 targets: ["PostFinanceCheckoutSdk", "ThreeDS_SDK", "TwintSDK"]),
     ],
     targets: [
         .binaryTarget(name: "PostFinanceCheckoutSdk",
@@ -15,7 +15,5 @@ let package = Package(
                       path: "TwintSDK.xcframework"),
         .binaryTarget(name: "ThreeDS_SDK",
                       path: "ThreeDS_SDK.xcframework"),
-        .target(name: "PostFinanceCheckoutSdkResource",
-                resources: [.copy("postfinancecheckoutsdkbundle.jsbundle")])
     ]
 )
